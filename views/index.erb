@@ -1,13 +1,21 @@
 <% if @profile %>
   <h3><%= @profile["first_name"] %>'s Amazing Profile</h3>
-
+  <br />
   <!-- TODO- Perhaps re-jig this to fit your new design / layout -->
+  <div class ='three'>
   <% @profile.each do |field, value| %>
+    <ul>
+    <li>
     <div class="profile-section box">
-      <h4><%= field %></h4>
-      <p class="profile-value"><%= value %></p>
+      
+        <h4><%= field.capitalize %></h4>
+        <p class="profile-value"><%= value %></p>
+      
     </div>
+    </li>
+    </ul>
   <% end %>
+  </div>
 
   <div id="stats" class="box">
     <h3>Stats</h3>
