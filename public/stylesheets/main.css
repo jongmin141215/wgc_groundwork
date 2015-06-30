@@ -44,11 +44,7 @@ h3 {
 /*ul {
   display: inline-block;
 }*/
-#content > h3 {
-  text-align: center;
-  font-weight: bold;
-  font-size: 24px;
-}
+
 .box {
   border-radius: 10px;
 }
@@ -58,3 +54,21 @@ ul:nth-child(5) .box {
   color: green;
   background-color: red;
 };*/
+#profile-title {
+  text-align: center;
+}
+
+#profile-title h3 {
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  
+}
+.profile-picture {
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+  border: 5px solid #990000;
+  vertical-align: middle;
+}
