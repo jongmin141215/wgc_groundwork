@@ -7,18 +7,16 @@
   <br />
   <!-- TODO- Perhaps re-jig this to fit your new design / layout -->
   <div class ='three'>
-  <% @profile.each do |field, value| %>
-    <ul>
-    <li>
-    <div class="profile-section box">
-      
-        <h4><%= field.capitalize %></h4>
-        <p class="profile-value"><%= value %></p>
-      
-    </div>
-    </li>
-    </ul>
-  <% end %>
+    <% @profile.each do |field, value| %>
+      <ul>
+        <li>
+          <div class="profile-section box">
+            <h4><%= field.capitalize %></h4>
+            <p class="profile-value"><%= value %></p>
+           </div>
+        </li>
+      </ul>
+    <% end %>
   </div>
 
   <div id="stats" class="box">
@@ -58,6 +56,7 @@
 
 
 <!-- Add your Javascript to this script tag -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script language="javascript">
   console.log("I am Javascript!");
 
