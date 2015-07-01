@@ -9,9 +9,9 @@
   <% @profile.each do |field, value| %>
     <ul>
       <li>
-        <div class="profile-section box">
+        <div class="profile-section box <%= field %>">
           <h4><%= field.capitalize %></h4>
-          <p class="profile-value"><%= value %></p>
+          <p class="profile-value <%= field %>-value"><%= value %></p>
         </div>
       </li>
     </ul>
@@ -21,7 +21,7 @@
   <div id="stats" class="box">
     <h3>Stats</h3>
     <!-- TODO - Set the contents of this span with JavaScript -->
-    <span id="word-count">0</span> words found.
+    <span id="word-count">0</span> words found (in the About, Ambtion, Learning_Experience, Projects &amp; Rationail fields).
   </div>
 
   <div id="problems" class="box">
@@ -61,17 +61,24 @@
   $('ul:nth-child(22)').insertAfter('ul:nth-child(19)');
  
   
-
-
-
-
   console.log("I am Javascript!");
 
   var profile_values = document.getElementsByClassName('profile-value');
   var total_words = 0;
 
+  var about_word_count = (($('.about-value').text()).split(' ')).length;
+  var ambition_word_count = (($('.ambition-value').text()).split(' ')).length;
+  var learning_experience_word_count = (($('.learning_experience-value').text()).split(' ')).length;
+  var projects_word_count = (($('.projects-value').text()).split(' ')).length;
+  var rationale_word_count = (($('.rationale-value').text()).split(' ')).length;
+
+  $('.about').append('<p>word count: [' + about_word_count + ']</p>');
+  $('.ambition').append('<p>word count: [' + ambition_word_count + ']</p>');
+  $('.learning_experience').append('<p>word count: [' + learning_experience_word_count + ']</p>');
+  $('.projects').append('<p>word count: [' + projects_word_count + ']</p>');
+  $('.rationale').append('<p>word count: [' + rationale_word_count + ']</p>');
   // TODO - Count the number of words in the profile.
   // hint - look at what the innerHTML property provides.
-
+  total_words = about_word_count + ambition_word_count + learning_experience_word_count + projects_word_count + rationale_word_count;
   document.getElementById('word-count').innerHTML = total_words;
 </script>
