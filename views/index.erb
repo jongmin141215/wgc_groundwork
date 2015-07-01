@@ -6,18 +6,17 @@
   </div>
   <br />
   <!-- TODO- Perhaps re-jig this to fit your new design / layout -->
-  <div class ='three'>
-    <% @profile.each do |field, value| %>
-      <ul>
-        <li>
-          <div class="profile-section box">
-            <h4><%= field.capitalize %></h4>
-            <p class="profile-value"><%= value %></p>
-           </div>
-        </li>
-      </ul>
-    <% end %>
-  </div>
+  <% @profile.each do |field, value| %>
+    <ul>
+      <li>
+        <div class="profile-section box">
+          <h4><%= field.capitalize %></h4>
+          <p class="profile-value"><%= value %></p>
+        </div>
+      </li>
+    </ul>
+  <% end %>
+  
 
   <div id="stats" class="box">
     <h3>Stats</h3>
@@ -29,23 +28,10 @@
     <h3>Programming Problems</h3>
     <a href="/primes">My Prime Number Solution</a>
   </div>
-
-  <div class="box">
-    <h3>Edit Profile</h3>
-
-    <form action="/update" method="POST">
-      <fieldset>
-        <div class="form-group">
-          <label for="trainee[about]">About</label>
-          <input type="text" name="trainee[about]" value="<%= @profile["about"] %>"/>
-        </div>
-
-        <!-- TODO - Add more fields so that your profile can be edited -->
-
-        <input type="submit" value="Update Profile" class="btn btn-primary" />
-      </fieldset>
-    </form>
+  <div>
+    <a href='http://localhost:4567/update'>Edit Profile</a>
   </div>
+  
 <% else %>
   <div class="welcome">
     <p>Welcome! Once you have updated the OAuth tokens, the link below will fetch your profile information.</p>
@@ -58,6 +44,8 @@
 <!-- Add your Javascript to this script tag -->
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script language="javascript">
+ 
+  
   console.log("I am Javascript!");
 
   var profile_values = document.getElementsByClassName('profile-value');
