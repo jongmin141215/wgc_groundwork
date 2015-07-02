@@ -44,24 +44,36 @@
 <!-- Add your Javascript to this script tag -->
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script language="javascript">
-  $('ul:nth-child(8)').insertBefore('ul:nth-child(3)');
-  $('ul:nth-child(14)').insertAfter('ul:nth-child(3)');
-  $('ul:nth-child(10)').insertAfter('ul:nth-child(4)');
-  $('ul:nth-child(9)').insertAfter('ul:nth-child(5)');
-  $('ul:nth-child(15)').insertAfter('ul:nth-child(8)');
-  $('ul:nth-child(18)').insertAfter('ul:nth-child(9)');
-  $('ul:nth-child(19)').insertAfter('ul:nth-child(10)');
-  $('ul:nth-child(13)').insertAfter('ul:nth-child(11)');
-  $('ul:nth-child(18)').insertAfter('ul:nth-child(12)');
-  $('ul:nth-child(15)').insertAfter('ul:nth-child(13)');
-  $('ul:nth-child(16)').insertAfter('ul:nth-child(14)');
-  $('ul:nth-child(21)').insertAfter('ul:nth-child(15)');
-  $('ul:nth-child(19)').insertAfter('ul:nth-child(17)');
-  $('ul:nth-child(21)').insertAfter('ul:nth-child(18)');
-  $('ul:nth-child(22)').insertAfter('ul:nth-child(19)');
+  $('.first_name').insertBefore('.about');
+  $('.last_name').insertAfter('.first_name');
+  $('.gender').insertAfter('.last_name');
+  $('.dob').insertAfter('.gender');
+  $('.ambition').insertAfter('.about');
+  $('.learning_experience').insertAfter('.ambition');
+  $('.projects').insertAfter('.learning_experience');
+  $('.rationale').insertAfter('.projects');
+  $('.employment_status').insertAfter('.rationale');
+  $('.phone_number').insertAfter('.employment_status');
+  $('.github').insertAfter('.phone_number');
+  $('.homepage').insertAfter('.github');
+  $('.twitter').insertAfter('.homepage');
+  $('.codecademy').insertAfter('.twitter');
+  $('.js_track_completedness').insertAfter('.codecademy');
+  $('.ruby_track_completedness').insertAfter('.js_track_completedness');
+  $('.web_track_completedness').insertAfter('.ruby_track_completedness');
  
   
   console.log("I am Javascript!");
+  //add content to codeacademy, ~completedness fields
+  $('.codecademy-value').html('<a href="http://www.codecademy.com/kjm141215"> kjm141215</a>');  
+  $('.js_track_completedness-value').text('Completed');
+  $('.ruby_track_completedness-value').text('Completed')
+  $('.web_track_completedness-value').text('Completed')
+  $('.homepage-value').text('N/A')
+  $('.primes_sum-value').text('Something')
+  $('.twitter-value').text('Something')
+  $('.employment_status-value').text('Unemployed')
+
 
   var profile_values = document.getElementsByClassName('profile-value');
   var total_words = 0;

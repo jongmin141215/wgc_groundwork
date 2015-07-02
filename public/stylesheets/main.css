@@ -18,6 +18,8 @@ body {
   padding: 1em;
   margin-bottom: 0.5em;
   border-radius: 10px;
+  margin-right: 0.5em;
+  display: inline-block;
 }
 
 .welcome {
@@ -73,59 +75,4 @@ ul:nth-child(5) .box {
 #logo {
   padding: 15px;
   background-color: #f3f3f3;
-}
-ul:nth-child(3), ul:nth-child(4), ul:nth-child(5) {
-  display: inline-block;
-  width: 24.5%;
-  text-align: center;
-  margin-right: 0.5em;
-}
-ul:nth-child(6) {
-  display: inline-block;
-  width: 24%;
-  text-align: center;
-}
-ul:nth-child(12) {
-  display: inline-block;
-  width: 48%;
-  text-align: center;
-  margin-right: 0.5em;
-}
-ul:nth-child(13) {
-  display: inline-block;
-  width: 48%;
-  text-align: center;
-}
-ul:nth-child(14), ul:nth-child(15) {
-  display: inline-block;
-  width: 32%;
-  text-align: center;
-  margin-left: 0.5em;
-}
-ul:nth-child(16) {
-  display: inline-block;
-  width: 32%;
-  text-align: center;
-}
-ul:nth-child(17), ul:nth-child(18), ul:nth-child(19) {
-  display: inline-block;
-  width: 23%;
-  text-align: center;
-  margin-left: 0.5em;
-}
-ul:nth-child(20) {
-  display: inline-block;
-  width: 23%;
-  text-align: center;
-}
-ul:nth-child(21) {
-  display: inline-block;
-  width: 48%;
-  text-align: center;
-  margin-left: 0.5em;
-}
-ul:nth-child(22) {
-  display: inline-block;
-  width: 48%;
-  text-align: center;
 }
