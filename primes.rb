@@ -1,26 +1,31 @@
 class Primes
+  def self.is_prime?(number)
+    [*2..(number/2)].each do |i|
+      if number % i == 0
+        return false
+      end
+    end
+    return true
+  end
+    # if ([*2..(number/2)].select {|n| number % n == 0}).length == 0
+    #   return true
+    # else 
+    #   return false
+    # end
+  
+
   def self.sum_to(limit = 100)
     # TODO - add your prime number solution here...
     all = [*2..limit]
-    no_primes = []
-    all.each do |num| 
-      if num > 2
-        i = 2
-        while (i < num) 
-          if num % i == 0
-            no_primes << num
-            break
-          end
-          i += 1
-        end
+    prime_numbers = []
+    all.each do |n|
+      if is_prime?(n)
+        prime_numbers << n
       end
     end
-    "I'm working on it!"
-    prime_numbers = all - no_primes
-    
-    prime_numbers.inject {|memo, prime| memo + prime}
+    prime_numbers.inject {|memo, n| memo + n}
   end
 end
 
 
-p Primes.sum_to(100)
+@sum = Primes.sum_to(2000)
